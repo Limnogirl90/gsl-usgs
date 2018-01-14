@@ -1,21 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Build Status](https://travis-ci.org/Limnogirl90/gsl-usgs.svg?branch=master)](https://travis-ci.org/Limnogirl90/gsl-usgs) [![Coverage Status](https://coveralls.io/repos/github/Limnogirl90/gsl-usgs/badge.svg?branch=master)](https://coveralls.io/github/Limnogirl90/gsl-usgs?branch=master)
 
-Things you may want to cover:
+* Ruby version: 2.5.0
 
-* Ruby version
+* System dependencies: PostgreSQL 9.6 is expected in prod (Heroku)
 
-* System dependencies
+* Configuration: bundle install
 
-* Configuration
+* Database creation: rake db:create
 
-* Database creation
+* Database initialization: rake db:migrate: rake db:seed
 
-* Database initialization
+* How to run the test suite: rake
 
-* How to run the test suite
+# Still to be documented:
 
 * Services (job queues, cache servers, search engines, etc.)
 
