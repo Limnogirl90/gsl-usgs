@@ -11,5 +11,13 @@ script:
 notifications:
   email: false
 deploy:
+  provider: heroku
   api_key:
     secure: tge//+UOQvDHLy3tZe/1iy7I1298+kmeB4Uu8KFnPTfXnX+yLhGo2pns2GHaKEV7IJcm/BVIZPdbOMkbTT2XOTbiiWnYRZw0UryN4CDVqELtaxAUUKXQilZM6TkapbRioYl9k5n12qAXBBkDy52RtMHGaeDR5HUa9GGnmCvIl0GIeFNikgKKR3zSQV1hlqjP3q2J1TDAo7tcerUNwhrHBK736Ic0EFvzUx8iB3SF1YVFkCmBU7G9q08MqEhvcgyBBzRrgcCW21rCkn0lRIcJpv3bCrCe9+amakDy4P+WcnbjNr8wKdDLiJsZVO8JtTf+ZNwkcUd8YZbhK3c7OfCCTgsQbZfQtfJ4kQodgCUU7UgVzf7jTpyODWanHbeX+uvyvKtG2qp+5MVnLm4hrsk+Xxy9DezhQR3nvD92Dko0/SWC6olEIqXnWrkgwl0UyptA399EiwFoI7FaaFDfswCcKifnaCF33RpsEaQzjvJLqubCp2l1iqPZ0DnYYC823aNsL/swAXWTGhEoZh1r2mmQ76Aa4WH78nN+v6qovg6It4/Z1Lr/cKEqmdQznsGOEkBL8WLFh+MNaHYrA1fcDNBDUkqA5yXc6bIC6jedvNDIVq8y1GJDXUZWfVWkAGubxQNpNNrYj3YWO8Ir7dZGN9fygxrVHIVBoljlKi0Fnpv4ZX8=
+  app:
+    develop: gsl-usgs-dev
+    master: gsl-usgs
+  on:
+    repo: Limnogirl90/gsl-usgs
+  run:
+    - "rails db:migrate"
