@@ -1,6 +1,6 @@
 # README
 
-[![Build Status](https://travis-ci.org/Limnogirl90/gsl-usgs.svg?branch=master)](https://travis-ci.org/Limnogirl90/gsl-usgs) [![Coverage Status](https://coveralls.io/repos/github/Limnogirl90/gsl-usgs/badge.svg?branch=master)](https://coveralls.io/github/Limnogirl90/gsl-usgs?branch=master)
+[![Build Status](http://travis-ci.org/Limnogirl90/gsl-usgs.svg?branch=master)](https://travis-ci.org/Limnogirl90/gsl-usgs) [![Coverage Status](http://coveralls.io/repos/github/Limnogirl90/gsl-usgs/badge.svg?branch=master)](https://coveralls.io/github/Limnogirl90/gsl-usgs?branch=master)
 
 * Ruby version: 2.5.0
 
