@@ -6,6 +6,11 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 
+# Do load the schema since we are doing test database in-memory
+#silence_stream STDOUT do
+  load "#{Rails.root}/db/schema.rb"
+#end
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Checks for pending migrations and applies them before tests are run.
