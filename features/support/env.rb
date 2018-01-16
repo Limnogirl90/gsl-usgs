@@ -1,6 +1,17 @@
 require 'coveralls'
 Coveralls.wear_merged!("rails")
 
+DIR = File.dirname(__FILE__)
+require DIR + '/../../config/environment'
+unless Rails.env.test?
+  puts "Please use RAILS_ENV=test for safety. Run:"
+  puts "RAILS_ENV=test cucumber"
+  exit 1
+end
+
+load DIR + "/../../db/schema.rb"
+ActiveRecord::Migration.maintain_test_schema!
+
 require 'cucumber/rails'
 
 ActionController::Base.allow_rescue = false
