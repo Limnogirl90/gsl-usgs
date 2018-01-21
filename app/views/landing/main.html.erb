@@ -1,5 +1,5 @@
 <ul>
-  <% @links.each do |l| %>
-    <li><%= link_to l %></li>
+  <% @datum.each do |d| %>
+    <li><%= link_to d[:site_num], d[:url] %></li>
   <% end %>
 </ul>

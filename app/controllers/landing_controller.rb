@@ -1,5 +1,7 @@
 class LandingController < ApplicationController
   def main
-    @links = Dataset.all.map(&:url_to_scan)
+    @datum = Dataset.all.map do |d|
+      {site_num: d.site_number, url: d.url_to_scan}
+    end
   end
 end

@@ -3,7 +3,10 @@ Given("I visit the app root") do
 end
 
 Given("I see a list of links") do
-  pending # Write code here that turns the phrase above into concrete actions
+  within('ul') do
+    a = all('li a')
+    expect(a.count).to be > 1
+  end
 end
 
 When("I follow the first link") do
