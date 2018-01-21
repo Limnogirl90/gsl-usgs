@@ -1,4 +1,7 @@
 language: ruby
+sudo: required
+addons:
+  chrome: stable
 rvm:
 - 2.5.0
 before_install:
