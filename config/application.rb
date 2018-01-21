@@ -29,5 +29,7 @@ module GslUsgs
       generate.routing_specs false
       generate.controller_specs false
     end
+
+    config.active_record.schema_format = :sql
   end
 end

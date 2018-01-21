@@ -9,6 +9,8 @@ before_install:
 before_script:
 - bundle exec rake db:create --all
 - bundle exec rake db:migrate
+- psql -c 'create database travis_ci_test;' -U postgres
+- cp config/database.yml.travis config/database.yml
 script:
 - bundle exec rake ci:tests
 notifications:
