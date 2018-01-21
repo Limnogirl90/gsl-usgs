@@ -9,7 +9,6 @@ unless Rails.env.test?
   exit 1
 end
 
-load DIR + "/../../db/schema.rb"
 ActiveRecord::Migration.maintain_test_schema!
 
 require 'cucumber/rails'

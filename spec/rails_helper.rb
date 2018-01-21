@@ -8,7 +8,7 @@ require 'rspec/rails'
 
 # Do load the schema since we are doing test database in-memory
 #silence_stream STDOUT do
-  load "#{Rails.root}/db/schema.rb"
+  #load "#{Rails.root}/db/schema.rb"
 #end
 
 # Add additional requires below this line. Rails is not loaded until this point!
