@@ -1,2 +1,5 @@
-<h1>Landing#main</h1>
-<p>Find me in app/views/landing/main.html.erb</p>
+<ul>
+  <% @links.each do |l| %>
+    <li><%= link_to l %></li>
+  <% end %>
+</ul>
