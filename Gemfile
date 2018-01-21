@@ -48,6 +48,8 @@ group :development, :test do
   gem 'coveralls', require: false
   gem 'rake', require: false
   gem 'sqlite3'
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
 end
 
 group :development do
