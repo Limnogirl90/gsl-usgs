@@ -1,5 +1,27 @@
 require "csv"
 
+def manhandle_into_csv_hash_array(data_number)
+  html_document = File.read( "tmp/capybara/#{data_number}" )
+  hdoc = Nokogiri::HTML( html_document )
+
+  csv_document = hdoc.css('pre').text
+
+  parsed_file = CSV.parse(csv_document, { :col_sep => "\t" })
+
+  csv_lines = []
+  comment_lines = []
+
+  parsed_file.each do |line|
+    if line.count == 1 && line.grep(/^#/).any?
+      comment_lines << line
+    else
+      csv_lines << line
+    end
+  end
+  @hash_array ||= []
+  @hash_array << {comment: comment_lines, csv: csv_lines}
+end
+
 def follow_link_please(nth)
   links = all('li a')
   link = links[nth]
@@ -28,9 +50,18 @@ Given("I visit the app root") do
 end
 
 Given("I see a list of links") do
+  links = all('li a')
   within('ul') do
-    a = all('li a')
-    expect(a.count).to be > 1
+    expect(links.count).to be > 1
+  end
+
+  max_count = links.count
+  @data_numbers = []
+  count = 0
+  [*count..(max_count-1)].each do |i|
+    link = links[i]
+    link_text = link.text
+    @data_numbers << link_text
   end
 end
 
@@ -40,23 +71,7 @@ When("I follow the first link") do
 end
 
 Then("I see a well-formed CSV document") do
-  html_document = File.read( "tmp/capybara/#@data_number" )
-  hdoc = Nokogiri::HTML( html_document )
-
-  csv_document = hdoc.css('pre').text
-
-  parsed_file = CSV.parse(csv_document, { :col_sep => "\t" })
-
-  @csv_lines = []
-  @comment_lines = []
-
-  parsed_file.each do |line|
-    if line.count == 1 && line.grep(/^#/).any?
-      @comment_lines << line
-    else
-      @csv_lines << line
-    end
-  end
+  manhandle_into_csv_hash_array(@data_number)
 end
 
 Then("the CSV has a consistent number of columns throughout") do
@@ -74,13 +89,13 @@ end
 When("I follow the rest of the links and collect their CSV") do
   links = all('li a')
   max_count = links.count
+  @data_numbers = []
 
   count = 0
-  [*count..max_count].each do |i|
+  [*count..(max_count-1)].each do |i|
     link = links[i]
     link_text = link.text
-    @data_number = link_text
-
+    @data_numbers << link_text
 
     puts "(sub) I follow the #{count} link"
     follow_link_please(count)
@@ -92,7 +107,11 @@ When("I follow the rest of the links and collect their CSV") do
 end
 
 Then("each of my CSVs are well-formed CSV document") do
-  pending # Write code here that turns the phrase above into concrete actions
+  @data_numbers.each do |num|
+    manhandle_into_csv_hash_array(num)
+  end
+
+  expect(@hash_array.count).to eq 14
 end
 
 Then("each of my CSVs has a consistent number of columns throughout") do
