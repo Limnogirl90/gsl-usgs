@@ -35,10 +35,10 @@ end
 
 def follow_link_for_csv_data(link_text)
   # Follow the link to water-quality samples
-  find('a', text: 'Field/Lab water-quality samples', wait: 15).click
+  find('a', text: 'Field/Lab water-quality samples', wait: 30).click
 
   # Set options
-  find('select[name="rdb_inventory_output"]', wait: 15).
+  find('select[name="rdb_inventory_output"]', wait: 30).
     find('option[value=value]').select_option
 
   # Submit
