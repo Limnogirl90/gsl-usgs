@@ -20,6 +20,7 @@ def manhandle_into_csv_hash_array(data_number)
   end
   @hash_array ||= []
   @hash_array << {comment: comment_lines, csv: csv_lines}
+  csv_lines
 end
 
 def follow_link_please(nth)
@@ -71,7 +72,7 @@ When("I follow the first link") do
 end
 
 Then("I see a well-formed CSV document") do
-  manhandle_into_csv_hash_array(@data_number)
+  @csv_lines = manhandle_into_csv_hash_array(@data_number)
 end
 
 Then("the CSV has a consistent number of columns throughout") do
