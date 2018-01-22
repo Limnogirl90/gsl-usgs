@@ -1,7 +1,7 @@
 Feature: I can get the data
   Background:
 
-    @javascript @pending @wip
+    @javascript
   Scenario: First data file is retrievable
     Given I visit the app root
     And I see a list of links
@@ -10,7 +10,7 @@ Feature: I can get the data
     And the CSV has a consistent number of columns throughout
     And the number of columns is not zero
 
-    @javascript @pending
+    @javascript
   Scenario: All listed data files are retrievable
     Given I visit the app root
     And I see a list of links
