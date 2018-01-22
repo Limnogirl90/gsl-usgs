@@ -20,6 +20,15 @@ def manhandle_into_csv_hash_array(data_number)
   end
   @hash_array ||= []
   @hash_array << {comment: comment_lines, csv: csv_lines}
+
+  File.open("tmp/capybara/#{data_number}.csv", 'w+') do |file|
+    csv_lines.each { |line| file.puts line }
+  end
+
+  File.open("tmp/capybara/#{data_number}.txt", 'w+') do |file|
+    comment_lines.each { |line| file.puts line }
+  end
+
   csv_lines
 end
 
@@ -38,7 +47,13 @@ def follow_link_for_csv_data(link_text)
   find('a', text: 'Field/Lab water-quality samples', wait: 30).click
 
   # Set options
-  find('select[name="rdb_inventory_output"]', wait: 30).
+  find('div.radioLine', text: 'Parameter Group Period of Record table')
+  find('input[type=radio][value=qw_sample_por_table]').click
+
+  find('div.radioLine', text: 'Tab-separated data')
+  find('input[type=radio][value=rdb]').click
+
+  find('select[name=rdb_compression]').
     find('option[value=value]').select_option
 
   # Submit
