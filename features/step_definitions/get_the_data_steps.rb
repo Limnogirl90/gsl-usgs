@@ -73,9 +73,11 @@ end
 
 When("I follow the rest of the links and collect their CSV") do
   links = all('li a')
+  max_count = links.count
 
   count = 0
-  links.each do |link|
+  [*count..max_count].each do |i|
+    link = links[i]
     link_text = link.text
     @data_number = link_text
 
@@ -85,6 +87,7 @@ When("I follow the rest of the links and collect their CSV") do
 
     count += 1
     visit root_path
+    links = all('li a')
   end
 end
 
