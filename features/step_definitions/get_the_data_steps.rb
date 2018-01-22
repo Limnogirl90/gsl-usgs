@@ -21,8 +21,8 @@ def manhandle_into_csv_hash_array(data_number)
   @hash_array ||= []
   @hash_array << {comment: comment_lines, csv: csv_lines}
 
-  File.open("tmp/capybara/#{data_number}.csv", 'w+') do |file|
-    csv_lines.each { |line| file.puts line }
+  CSV.open("tmp/capybara/#{data_number}.csv", 'wb') do |csv|
+    csv_lines.each { |line| csv << line }
   end
 
   File.open("tmp/capybara/#{data_number}.txt", 'w+') do |file|
