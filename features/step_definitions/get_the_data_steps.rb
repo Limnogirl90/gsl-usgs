@@ -38,8 +38,14 @@ def follow_link_for_csv_data(link_text)
   find('a', text: 'Field/Lab water-quality samples', wait: 30).click
 
   # Set options
-  find('select[name="rdb_inventory_output"]', wait: 30).
-    find('option[value=value]').select_option
+  find('div.radioLine', text: 'Parameter Group Period of Record table')
+  find('input[type=radio][value=qw_sample_por_table]').click
+
+  find('div.radioLine', text: 'Tab-separated data')
+  find('input[type=radio][value=html_table]').click
+
+  #find('select[name="rdb_inventory_output"]', wait: 30).
+  #  find('option[value=value]').select_option
 
   # Submit
   find('input#search_submit_button').click

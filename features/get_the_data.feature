@@ -1,7 +1,7 @@
 Feature: I can get the data
   Background:
 
-    @javascript
+    @javascript @wip
   Scenario: First data file is retrievable
     Given I visit the app root
     And I see a list of links
