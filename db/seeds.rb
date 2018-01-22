@@ -6,26 +6,32 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts "Checking if Dataset.any? ... "
+if Dataset.any?
+  puts "found, not seeding Dataset"
+else
+  puts "MISSING, seeding Dataset!"
 
-sites = [
-  411116112244401,
-  411403112200801,
-  10141000,
-  411318112334001,
-  411325112400701,
-  10010020,
-  410644112382601,
-  410637112270401,
-  10010000,
-  404607112193801,
-  10172630,
-  410401112134801,
-  410153112082301,
-  10140700
-]
+  sites = [
+    411116112244401,
+    411403112200801,
+    10141000,
+    411318112334001,
+    411325112400701,
+    10010020,
+    410644112382601,
+    410637112270401,
+    10010000,
+    404607112193801,
+    10172630,
+    410401112134801,
+    410153112082301,
+    10140700
+  ]
 
-attribs = sites.map do |s|
-  { base_url: "https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=#{s}",
-    site_number: s }
+  attribs = sites.map do |s|
+    { base_url: "https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=",
+      site_number: s }
+  end
+  Dataset.create(attribs)
 end
-Dataset.create(attribs)

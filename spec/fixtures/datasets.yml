@@ -1,170 +1,170 @@
 ---
 Dataset_1:
   id: 1
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=411116112244401
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '411116112244401'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &1 2018-01-16 01:32:20.607255000 Z
+    utc: &1 2018-01-21 22:38:12.266386000 Z
     zone: &2 !ruby/object:ActiveSupport::TimeZone
       name: Etc/UTC
     time: *1
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3 2018-01-16 01:32:20.607255000 Z
+    utc: &3 2018-01-21 22:38:12.266386000 Z
     zone: *2
     time: *3
 Dataset_2:
   id: 2
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=411403112200801
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '411403112200801'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &4 2018-01-16 01:32:20.610411000 Z
+    utc: &4 2018-01-21 22:38:12.273646000 Z
     zone: *2
     time: *4
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &5 2018-01-16 01:32:20.610411000 Z
+    utc: &5 2018-01-21 22:38:12.273646000 Z
     zone: *2
     time: *5
 Dataset_3:
   id: 3
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=10141000
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '10141000'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &6 2018-01-16 01:32:20.612572000 Z
+    utc: &6 2018-01-21 22:38:12.287776000 Z
     zone: *2
     time: *6
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &7 2018-01-16 01:32:20.612572000 Z
+    utc: &7 2018-01-21 22:38:12.287776000 Z
     zone: *2
     time: *7
 Dataset_4:
   id: 4
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=411318112334001
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '411318112334001'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &8 2018-01-16 01:32:20.614592000 Z
+    utc: &8 2018-01-21 22:38:12.299377000 Z
     zone: *2
     time: *8
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &9 2018-01-16 01:32:20.614592000 Z
+    utc: &9 2018-01-21 22:38:12.299377000 Z
     zone: *2
     time: *9
 Dataset_5:
   id: 5
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=411325112400701
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '411325112400701'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &10 2018-01-16 01:32:20.617111000 Z
+    utc: &10 2018-01-21 22:38:12.311041000 Z
     zone: *2
     time: *10
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &11 2018-01-16 01:32:20.617111000 Z
+    utc: &11 2018-01-21 22:38:12.311041000 Z
     zone: *2
     time: *11
 Dataset_6:
   id: 6
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=10010020
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '10010020'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &12 2018-01-16 01:32:20.619383000 Z
+    utc: &12 2018-01-21 22:38:12.320240000 Z
     zone: *2
     time: *12
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &13 2018-01-16 01:32:20.619383000 Z
+    utc: &13 2018-01-21 22:38:12.320240000 Z
     zone: *2
     time: *13
 Dataset_7:
   id: 7
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=410644112382601
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '410644112382601'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &14 2018-01-16 01:32:20.621521000 Z
+    utc: &14 2018-01-21 22:38:12.343271000 Z
     zone: *2
     time: *14
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &15 2018-01-16 01:32:20.621521000 Z
+    utc: &15 2018-01-21 22:38:12.343271000 Z
     zone: *2
     time: *15
 Dataset_8:
   id: 8
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=410637112270401
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '410637112270401'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &16 2018-01-16 01:32:20.623437000 Z
+    utc: &16 2018-01-21 22:38:12.353769000 Z
     zone: *2
     time: *16
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &17 2018-01-16 01:32:20.623437000 Z
+    utc: &17 2018-01-21 22:38:12.353769000 Z
     zone: *2
     time: *17
 Dataset_9:
   id: 9
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=10010000
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '10010000'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &18 2018-01-16 01:32:20.625260000 Z
+    utc: &18 2018-01-21 22:38:12.365147000 Z
     zone: *2
     time: *18
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &19 2018-01-16 01:32:20.625260000 Z
+    utc: &19 2018-01-21 22:38:12.365147000 Z
     zone: *2
     time: *19
 Dataset_10:
   id: 10
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=404607112193801
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '404607112193801'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &20 2018-01-16 01:32:20.627142000 Z
+    utc: &20 2018-01-21 22:38:12.373152000 Z
     zone: *2
     time: *20
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &21 2018-01-16 01:32:20.627142000 Z
+    utc: &21 2018-01-21 22:38:12.373152000 Z
     zone: *2
     time: *21
 Dataset_11:
   id: 11
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=10172630
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '10172630'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &22 2018-01-16 01:32:20.629225000 Z
+    utc: &22 2018-01-21 22:38:12.395684000 Z
     zone: *2
     time: *22
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &23 2018-01-16 01:32:20.629225000 Z
+    utc: &23 2018-01-21 22:38:12.395684000 Z
     zone: *2
     time: *23
 Dataset_12:
   id: 12
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=410401112134801
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '410401112134801'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &24 2018-01-16 01:32:20.631082000 Z
+    utc: &24 2018-01-21 22:38:12.405977000 Z
     zone: *2
     time: *24
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &25 2018-01-16 01:32:20.631082000 Z
+    utc: &25 2018-01-21 22:38:12.405977000 Z
     zone: *2
     time: *25
 Dataset_13:
   id: 13
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=410153112082301
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '410153112082301'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &26 2018-01-16 01:32:20.633025000 Z
+    utc: &26 2018-01-21 22:38:12.420732000 Z
     zone: *2
     time: *26
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &27 2018-01-16 01:32:20.633025000 Z
+    utc: &27 2018-01-21 22:38:12.420732000 Z
     zone: *2
     time: *27
 Dataset_14:
   id: 14
-  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=10140700
+  base_url: https://waterdata.usgs.gov/nwis/inventory?agency_code=USGS&site_no=
   site_number: '10140700'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &28 2018-01-16 01:32:20.635148000 Z
+    utc: &28 2018-01-21 22:38:12.436589000 Z
     zone: *2
     time: *28
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &29 2018-01-16 01:32:20.635148000 Z
+    utc: &29 2018-01-21 22:38:12.436589000 Z
     zone: *2
     time: *29
