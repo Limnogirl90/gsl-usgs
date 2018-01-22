@@ -115,9 +115,25 @@ Then("each of my CSVs are well-formed CSV document") do
 end
 
 Then("each of my CSVs has a consistent number of columns throughout") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@hash_array.count).to_not eq 0
+  expect(@hash_array.count).to be_positive
+  @hash_array.each do |document|
+
+    csv = document[:csv]
+    count_to_expect = csv.first.count
+    document[:csv].each do |csv|
+      expect(csv.count).to eq count_to_expect
+    end
+  end
 end
 
 Then("each of my CSVs has a number of columns that is not zero") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(@hash_array.count).to_not eq 0
+  expect(@hash_array.count).to be_positive
+  @hash_array.each do |document|
+
+    csv = document[:csv]
+    count_to_expect = csv.first.count
+    expect(count_to_expect).to_not eq 0
+  end
 end
